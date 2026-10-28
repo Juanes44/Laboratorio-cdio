@@ -19,7 +19,7 @@ void loop() {
     } else {
     digitalWrite(LED, HIGH); // Enciende el LED al soltar
     }
-    delay(50);
+    delay(200);
   }
   ultimoP=estadoP;
 }
