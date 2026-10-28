@@ -14,12 +14,8 @@ void setup() {
 void loop() {
   estadoP = digitalRead(PULSADOR);
   if (estadoP == LOW && ultimoP==HIGH) {
-    if (digitalRead(LED)==HIGH){
-    digitalWrite(LED, LOW);  // Apaga el LED al presionar
-    } else {
-    digitalWrite(LED, HIGH); // Enciende el LED al soltar
-    }
-    delay(200);
+    digitalWrite(LED, !digitalRead(LED));
+    delay(400);
   }
   ultimoP=estadoP;
 }
